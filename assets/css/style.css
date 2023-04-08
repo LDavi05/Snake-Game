@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', Sans-Serif;
+}
+
+body {
+  background: #B0F5DD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 65vmin;
+  height: 70vmin;
+  background: #12E675;
+  border: 8px ridge brown;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.game-detail {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+  background: #1E5E0E;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.board .food {
+  background: #FF003D;
+}
+
+.board .head {
+  background: #60CBFF;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+.controls i {
+  padding: 8px 0;
+  color: #B1FF6E;
+  width: calc(100% / 4);
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  border-right: 1px solid #244704;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  
+  .game-detail {
+    font-size: 0.650rem;
+    padding: 15px 22px;
+  }
+  
+  .controls {
+    display: flex;
+  }
+  
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
